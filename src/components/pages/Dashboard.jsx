@@ -3,6 +3,7 @@ import ApperIcon from "@/components/ApperIcon";
 import StatCard from "@/components/molecules/StatCard";
 import ProgressRing from "@/components/molecules/ProgressRing";
 import AIJobStatus from "@/components/molecules/AIJobStatus";
+import CalendarWidget from "@/components/molecules/CalendarWidget";
 import Card from "@/components/atoms/Card";
 import Button from "@/components/atoms/Button";
 import Badge from "@/components/atoms/Badge";
@@ -12,7 +13,6 @@ import courseService from "@/services/api/courseService";
 import assignmentService from "@/services/api/assignmentService";
 import userService from "@/services/api/userService";
 import aiJobService from "@/services/api/aiJobService";
-
 const Dashboard = ({ userRole = "user" }) => {
   const [data, setData] = useState({
     courses: [],
@@ -206,8 +206,10 @@ const Dashboard = ({ userRole = "user" }) => {
           <StatCard key={index} {...stat} />
         ))}
       </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        {/* Calendar Widget */}
+        <CalendarWidget userRole={userRole} />
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* AI Jobs Status */}
         <Card className="p-6">
           <div className="flex items-center justify-between mb-6">

@@ -77,6 +77,32 @@ const Loading = ({ variant = "default" }) => {
         ))}
       </div>
     );
+}
+
+  if (variant === "calendar") {
+    return (
+      <div className="space-y-6">
+        <div className="glass-card p-6">
+          <div className="flex justify-between items-center mb-6">
+            <div className="w-32 h-6 bg-white/10 rounded skeleton"></div>
+            <div className="flex space-x-2">
+              <div className="w-8 h-8 bg-white/10 rounded skeleton"></div>
+              <div className="w-8 h-8 bg-white/10 rounded skeleton"></div>
+            </div>
+          </div>
+          <div className="grid grid-cols-7 gap-2 mb-4">
+            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+              <div key={i} className="w-10 h-6 bg-white/10 rounded skeleton"></div>
+            ))}
+          </div>
+          <div className="grid grid-cols-7 gap-2">
+            {Array.from({ length: 35 }, (_, i) => (
+              <div key={i} className="aspect-square bg-white/10 rounded skeleton"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
   }
 
   // Default loading

@@ -10,10 +10,10 @@ import Landing from "@/components/pages/Landing";
 import Dashboard from "@/components/pages/Dashboard";
 import Courses from "@/components/pages/Courses";
 import Assignments from "@/components/pages/Assignments";
+import Calendar from "@/components/pages/Calendar";
 import Analytics from "@/components/pages/Analytics";
 import Users from "@/components/pages/Users";
 import Settings from "@/components/pages/Settings";
-
 // Modals
 import CourseCreateModal from "@/components/organisms/CourseCreateModal";
 import AssignmentCreateModal from "@/components/organisms/AssignmentCreateModal";
@@ -41,7 +41,7 @@ function App() {
               </Layout>
             }
           />
-          <Route
+<Route
             path="/courses"
             element={
               <Layout userRole={userRole}>
@@ -57,7 +57,14 @@ function App() {
               </Layout>
             }
           />
-          
+          <Route
+            path="/calendar"
+            element={
+              <Layout userRole={userRole}>
+                <Calendar userRole={userRole} />
+              </Layout>
+            }
+          />
           {/* Role-based routes */}
           {(userRole === "admin" || userRole === "manager") && (
             <Route

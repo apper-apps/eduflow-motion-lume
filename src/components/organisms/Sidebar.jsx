@@ -7,10 +7,11 @@ const Sidebar = ({ isOpen, onClose, userRole = "user" }) => {
   const location = useLocation();
 
   const getNavigationItems = () => {
-    const baseItems = [
+const baseItems = [
       { name: "Dashboard", icon: "LayoutDashboard", path: "/dashboard" },
       { name: "Courses", icon: "BookOpen", path: "/courses" },
-      { name: "Assignments", icon: "ClipboardList", path: "/assignments" }
+      { name: "Assignments", icon: "ClipboardList", path: "/assignments" },
+      { name: "Calendar", icon: "Calendar", path: "/calendar" }
     ];
 
     const roleSpecificItems = {

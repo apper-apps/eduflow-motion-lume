@@ -31,7 +31,7 @@ class AssignmentService {
     return { ...newAssignment };
   }
 
-  async update(id, updateData) {
+async update(id, updateData) {
     await this.delay();
     const index = this.assignments.findIndex(a => a.Id === parseInt(id));
     if (index === -1) {
@@ -39,6 +39,14 @@ class AssignmentService {
     }
     this.assignments[index] = { ...this.assignments[index], ...updateData };
     return { ...this.assignments[index] };
+  }
+
+  async getByDateRange(startDate, endDate) {
+    await this.delay();
+    return this.assignments.filter(assignment => {
+      const dueDate = new Date(assignment.dueDate);
+      return dueDate >= new Date(startDate) && dueDate <= new Date(endDate);
+    });
   }
 
   async delete(id) {
