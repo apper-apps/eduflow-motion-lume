@@ -62,4 +62,5 @@ class CourseService {
   }
 }
 
+export const courseService = new CourseService();
 export default new CourseService();
