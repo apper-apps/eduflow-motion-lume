@@ -1,31 +1,34 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
-import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { cn } from '@/utils/cn';
+import React, { forwardRef, useEffect, useRef } from "react";
+import ReactQuill from "react-quill";
+import { cn } from "@/utils/cn";
 
 const RichTextEditor = forwardRef(({
   value = '',
   onChange,
   placeholder = 'Start writing...',
-  className,
-  label,
   error,
+  label,
   helperText,
-  readOnly = false,
   height = '200px',
+  readOnly = false,
+  className,
   ...props
 }, ref) => {
   const quillRef = useRef(null);
 
   const modules = {
     toolbar: [
-      [{ 'header': [1, 2, 3, false] }],
+      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+      [{ 'font': [] }],
+      [{ 'size': ['small', false, 'large', 'huge'] }],
       ['bold', 'italic', 'underline', 'strike'],
       [{ 'color': [] }, { 'background': [] }],
-      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-      [{ 'indent': '-1'}, { 'indent': '+1' }],
-      [{ 'align': [] }],
-      ['link', 'image'],
+      [{ 'script': 'sub' }, { 'script': 'super' }],
+      [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }],
+      [{ 'direction': 'rtl' }, { 'align': [] }],
+      ['link', 'image', 'video', 'formula'],
+      ['code-block'],
       ['clean']
     ],
     clipboard: {
@@ -34,22 +37,25 @@ const RichTextEditor = forwardRef(({
   };
 
   const formats = [
-    'header', 'bold', 'italic', 'underline', 'strike',
-    'color', 'background', 'list', 'bullet', 'indent',
-    'align', 'link', 'image'
+    'header', 'font', 'size',
+    'bold', 'italic', 'underline', 'strike',
+    'color', 'background',
+    'script', 'super',
+    'list', 'bullet', 'indent',
+    'direction', 'align',
+    'link', 'image', 'video',
+    'code-block', 'formula'
   ];
 
-  const handleChange = (content, delta, source, editor) => {
-    if (onChange) {
-      onChange(content);
-    }
+  const handleChange = (content) => {
+    onChange?.(content);
   };
 
   useEffect(() => {
-    if (ref) {
+    if (ref && quillRef.current) {
       if (typeof ref === 'function') {
         ref(quillRef.current);
-      } else {
+      } else if (ref && typeof ref === 'object') {
         ref.current = quillRef.current;
       }
     }
@@ -62,6 +68,7 @@ const RichTextEditor = forwardRef(({
           {label}
         </label>
       )}
+      
       <div 
         className={cn(
           "rich-text-editor bg-surface/60 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden transition-all duration-200",
@@ -87,6 +94,7 @@ const RichTextEditor = forwardRef(({
           {...props}
         />
       </div>
+      
       {error && (
         <p className="text-sm text-error mt-1">{error}</p>
       )}
@@ -94,7 +102,7 @@ const RichTextEditor = forwardRef(({
         <p className="text-sm text-gray-400 mt-1">{helperText}</p>
       )}
 
-      <style jsx global>{`
+      <style>{`
         .rich-text-editor .ql-toolbar {
           background: rgba(24, 24, 27, 0.8);
           border: none;
