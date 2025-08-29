@@ -60,4 +60,5 @@ class AssignmentService {
   }
 }
 
+export const assignmentService = new AssignmentService();
 export default new AssignmentService();
