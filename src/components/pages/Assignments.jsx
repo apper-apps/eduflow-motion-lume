@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 import ApperIcon from "@/components/ApperIcon";
-import Button from "@/components/atoms/Button";
 import SearchBar from "@/components/molecules/SearchBar";
 import Select from "@/components/atoms/Select";
+import Button from "@/components/atoms/Button";
 import AssignmentList from "@/components/organisms/AssignmentList";
-import { toast } from "react-toastify";
 
 const Assignments = ({ userRole = "user" }) => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
-  const [filters, setFilters] = useState({
+const [filters, setFilters] = useState({
     courseId: "",
     type: "",
     status: "",
@@ -16,7 +18,7 @@ const Assignments = ({ userRole = "user" }) => {
   });
 
   const handleCreateAssignment = () => {
-    toast.info("Create assignment functionality would be implemented");
+    navigate('/assignments/create');
   };
 
   const handleBulkGrade = () => {
@@ -83,7 +85,7 @@ const Assignments = ({ userRole = "user" }) => {
             >
               Bulk Grade
             </Button>
-            <Button
+<Button
               onClick={handleCreateAssignment}
               variant="primary"
               icon="Plus"

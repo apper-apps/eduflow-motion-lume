@@ -14,6 +14,9 @@ import Analytics from "@/components/pages/Analytics";
 import Users from "@/components/pages/Users";
 import Settings from "@/components/pages/Settings";
 
+// Modals
+import CourseCreateModal from "@/components/organisms/CourseCreateModal";
+import AssignmentCreateModal from "@/components/organisms/AssignmentCreateModal";
 function App() {
   // Mock user role - in a real app this would come from authentication context
   const [userRole] = useState("admin"); // Can be: "admin", "manager", "user"
@@ -21,9 +24,13 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Routes>
+<Routes>
           {/* Landing page */}
           <Route path="/" element={<Landing />} />
+          
+          {/* Modal routes */}
+          <Route path="/courses/create" element={<CourseCreateModal />} />
+          <Route path="/assignments/create" element={<AssignmentCreateModal />} />
           
           {/* Main application routes */}
           <Route
@@ -83,7 +90,7 @@ function App() {
             }
           />
           
-          {/* Redirect unknown routes to dashboard */}
+{/* Redirect unknown routes to dashboard */}
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
 

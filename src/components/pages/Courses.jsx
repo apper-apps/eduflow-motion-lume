@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import ApperIcon from "@/components/ApperIcon";
-import Button from "@/components/atoms/Button";
 import SearchBar from "@/components/molecules/SearchBar";
 import Select from "@/components/atoms/Select";
+import Button from "@/components/atoms/Button";
 import CourseGrid from "@/components/organisms/CourseGrid";
-import { toast } from "react-toastify";
 
 const Courses = ({ userRole = "user" }) => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [viewMode, setViewMode] = useState("grid");
   const [filters, setFilters] = useState({
@@ -15,8 +17,8 @@ const Courses = ({ userRole = "user" }) => {
     sortBy: "title"
   });
 
-  const handleCreateCourse = () => {
-    toast.info("Create course functionality would be implemented");
+const handleCreateCourse = () => {
+    navigate('/courses/create');
   };
 
   const handleImportCourse = () => {
