@@ -1,0 +1,86 @@
+[
+  {
+    "Id": 1,
+    "title": "Introduction to Machine Learning",
+    "description": "Learn the fundamentals of machine learning algorithms, data preprocessing, and model evaluation. This comprehensive course covers supervised and unsupervised learning techniques.",
+    "instructorId": "instructor-1",
+    "enrollments": 156,
+    "status": "active",
+    "modules": [
+      { "id": 1, "title": "Introduction to ML", "duration": 45 },
+      { "id": 2, "title": "Data Preprocessing", "duration": 60 },
+      { "id": 3, "title": "Supervised Learning", "duration": 90 }
+    ],
+    "aiGenerated": false
+  },
+  {
+    "Id": 2,
+    "title": "Advanced React Development",
+    "description": "Master advanced React concepts including hooks, context, performance optimization, and modern state management patterns for building scalable applications.",
+    "instructorId": "instructor-2",
+    "enrollments": 203,
+    "status": "active",
+    "modules": [
+      { "id": 1, "title": "Advanced Hooks", "duration": 75 },
+      { "id": 2, "title": "Context & State Management", "duration": 60 },
+      { "id": 3, "title": "Performance Optimization", "duration": 80 }
+    ],
+    "aiGenerated": true
+  },
+  {
+    "Id": 3,
+    "title": "Data Science with Python",
+    "description": "Comprehensive data science course covering Python libraries, statistical analysis, data visualization, and machine learning applications in real-world scenarios.",
+    "instructorId": "instructor-3",
+    "enrollments": 178,
+    "status": "active",
+    "modules": [
+      { "id": 1, "title": "Python for Data Science", "duration": 120 },
+      { "id": 2, "title": "Statistical Analysis", "duration": 90 },
+      { "id": 3, "title": "Data Visualization", "duration": 75 }
+    ],
+    "aiGenerated": false
+  },
+  {
+    "Id": 4,
+    "title": "Digital Marketing Fundamentals",
+    "description": "Learn essential digital marketing strategies, SEO, social media marketing, content creation, and analytics to grow your online presence effectively.",
+    "instructorId": "instructor-4",
+    "enrollments": 142,
+    "status": "active",
+    "modules": [
+      { "id": 1, "title": "SEO Basics", "duration": 60 },
+      { "id": 2, "title": "Social Media Strategy", "duration": 45 },
+      { "id": 3, "title": "Content Marketing", "duration": 70 }
+    ],
+    "aiGenerated": true
+  },
+  {
+    "Id": 5,
+    "title": "Cloud Computing with AWS",
+    "description": "Master Amazon Web Services fundamentals, cloud architecture, deployment strategies, and DevOps practices for scalable cloud solutions.",
+    "instructorId": "instructor-5",
+    "enrollments": 98,
+    "status": "draft",
+    "modules": [
+      { "id": 1, "title": "AWS Fundamentals", "duration": 90 },
+      { "id": 2, "title": "EC2 & Storage", "duration": 75 },
+      { "id": 3, "title": "Networking & Security", "duration": 85 }
+    ],
+    "aiGenerated": false
+  },
+  {
+    "Id": 6,
+    "title": "UX/UI Design Principles",
+    "description": "Explore user experience design principles, interface design patterns, prototyping tools, and user research methodologies for creating intuitive digital products.",
+    "instructorId": "instructor-6",
+    "enrollments": 187,
+    "status": "active",
+    "modules": [
+      { "id": 1, "title": "Design Thinking", "duration": 60 },
+      { "id": 2, "title": "Prototyping", "duration": 75 },
+      { "id": 3, "title": "User Testing", "duration": 50 }
+    ],
+    "aiGenerated": true
+  }
+]

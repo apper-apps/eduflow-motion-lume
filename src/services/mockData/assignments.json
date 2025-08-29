@@ -1,0 +1,88 @@
+[
+  {
+    "Id": 1,
+    "courseId": "1",
+    "title": "Machine Learning Algorithm Implementation",
+    "dueDate": "2024-12-30T23:59:00Z",
+    "maxPoints": 100,
+    "type": "project",
+    "submissions": [
+      { "userId": "user-1", "submittedAt": "2024-12-15T14:30:00Z", "grade": 95 },
+      { "userId": "user-2", "submittedAt": "2024-12-16T09:15:00Z", "grade": null }
+    ]
+  },
+  {
+    "Id": 2,
+    "courseId": "2",
+    "title": "React Performance Optimization Essay",
+    "dueDate": "2024-12-28T23:59:00Z",
+    "maxPoints": 75,
+    "type": "essay",
+    "submissions": [
+      { "userId": "user-3", "submittedAt": "2024-12-14T16:45:00Z", "grade": 88 }
+    ]
+  },
+  {
+    "Id": 3,
+    "courseId": "3",
+    "title": "Data Visualization Project",
+    "dueDate": "2025-01-05T23:59:00Z",
+    "maxPoints": 120,
+    "type": "project",
+    "submissions": []
+  },
+  {
+    "Id": 4,
+    "courseId": "4",
+    "title": "Digital Marketing Strategy Quiz",
+    "dueDate": "2024-12-25T23:59:00Z",
+    "maxPoints": 50,
+    "type": "quiz",
+    "submissions": [
+      { "userId": "user-4", "submittedAt": "2024-12-20T10:30:00Z", "grade": 42 },
+      { "userId": "user-5", "submittedAt": "2024-12-21T13:15:00Z", "grade": 47 }
+    ]
+  },
+  {
+    "Id": 5,
+    "courseId": "1",
+    "title": "Supervised Learning Discussion",
+    "dueDate": "2025-01-10T23:59:00Z",
+    "maxPoints": 25,
+    "type": "discussion",
+    "submissions": [
+      { "userId": "user-1", "submittedAt": "2024-12-18T11:20:00Z", "grade": null }
+    ]
+  },
+  {
+    "Id": 6,
+    "courseId": "5",
+    "title": "AWS Architecture Design",
+    "dueDate": "2025-01-15T23:59:00Z",
+    "maxPoints": 100,
+    "type": "project",
+    "submissions": []
+  },
+  {
+    "Id": 7,
+    "courseId": "6",
+    "title": "User Research Report",
+    "dueDate": "2025-01-08T23:59:00Z",
+    "maxPoints": 90,
+    "type": "essay",
+    "submissions": [
+      { "userId": "user-6", "submittedAt": "2024-12-22T15:45:00Z", "grade": 85 }
+    ]
+  },
+  {
+    "Id": 8,
+    "courseId": "2",
+    "title": "React Hooks Implementation",
+    "dueDate": "2024-12-24T23:59:00Z",
+    "maxPoints": 60,
+    "type": "project",
+    "submissions": [
+      { "userId": "user-7", "submittedAt": "2024-12-23T08:30:00Z", "grade": 58 }
+    ]
+  }
+]

@@ -1,0 +1,69 @@
+[
+  {
+    "Id": 1,
+    "type": "Course Content Generation",
+    "status": "completed",
+    "progress": 100,
+    "result": {
+      "contentGenerated": true,
+      "modules": 5,
+      "totalWords": 12500
+    },
+    "error": null,
+    "createdBy": "instructor-1",
+    "createdAt": "2024-12-22T08:30:00Z"
+  },
+  {
+    "Id": 2,
+    "type": "Assignment Creation",
+    "status": "processing",
+    "progress": 65,
+    "result": null,
+    "error": null,
+    "createdBy": "instructor-2",
+    "createdAt": "2024-12-22T14:15:00Z"
+  },
+  {
+    "Id": 3,
+    "type": "Quiz Generation",
+    "status": "pending",
+    "progress": 0,
+    "result": null,
+    "error": null,
+    "createdBy": "instructor-3",
+    "createdAt": "2024-12-22T16:45:00Z"
+  },
+  {
+    "Id": 4,
+    "type": "Learning Path Optimization",
+    "status": "failed",
+    "progress": 0,
+    "result": null,
+    "error": "Insufficient data to generate personalized learning path",
+    "createdBy": "admin-1",
+    "createdAt": "2024-12-22T12:20:00Z"
+  },
+  {
+    "Id": 5,
+    "type": "Content Translation",
+    "status": "completed",
+    "progress": 100,
+    "result": {
+      "languagesGenerated": ["Spanish", "French", "German"],
+      "totalTranslations": 45
+    },
+    "error": null,
+    "createdBy": "instructor-4",
+    "createdAt": "2024-12-21T20:10:00Z"
+  },
+  {
+    "Id": 6,
+    "type": "Assessment Analytics",
+    "status": "processing",
+    "progress": 80,
+    "result": null,
+    "error": null,
+    "createdBy": "manager-1",
+    "createdAt": "2024-12-22T15:30:00Z"
+  }
+]
